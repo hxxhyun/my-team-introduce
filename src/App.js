@@ -44,13 +44,13 @@ function App() {
       <div className='title'>팀원 소개</div>
       <div className='teammate'>
         <button className='member'>
-
+          신희현
         </button>
         <button className='member'>
-
+          김광훈
         </button>
         <button className='member'>
-
+          박영석
         </button>
       </div>
 
