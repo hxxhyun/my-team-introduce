@@ -1,8 +1,27 @@
 import './App.css';
 import logo from './image/logo.png';
-
+import React, { useState } from 'react';
 
 function App() {
+  // const [comment, setComment] = useState([
+  //   {id:1, nickname: '홍길동', detail:'우와!'},
+  // ]);
+
+  const [nickname, setNickname] = useState('');
+  const [detail, setDetail] = useState('');
+
+  const nicknameChangeHandler = (event) => {
+    setNickname(event.target.value);
+  };
+
+  const detailChangeHandler = (event) => {
+    setDetail(event.target.value);
+  }
+
+  const clickAddbtn = () => {
+    alert('게시글이 등록되었습니다.');
+  }
+
   return (
     <div className='layout'>
       <div className='header'>
@@ -41,9 +60,9 @@ function App() {
           코멘트 기록
         </div>
         <div className='new-comment'>
-          <input className='nickname' type='text' />
-          <input className='detail' type='text' />
-          <button className='addbtn'>게시</button>
+          <input className='nickname' type='text' value={nickname} onChange={nicknameChangeHandler} placeholder='닉네임'/>
+          <input className='detail' type='text' value={detail} onChange={detailChangeHandler} placeholder='댓글을 남겨주세요'/>
+          <button className='addbtn' onClick={()=>clickAddbtn()}>게시</button>
         </div>
       </div>
     </div>

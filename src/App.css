@@ -71,6 +71,9 @@
   border: 1px solid black;
   margin: 10px;
   height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
 .new-comment {
