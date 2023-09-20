@@ -35,7 +35,7 @@ function App() {
         </button>
       </div>
 
-      <div className='title'>방명록</div>
+      {/* <div className='title'>방명록</div> */}
       <div className='comment'>
         <div className='comment-record'>
           코멘트 기록
