@@ -63,10 +63,10 @@ function App() {
           <div className='comment-record'>
             {messages.map((message, index) => (
               <div key={index} className='comment-item'>
-                <div className="username">
+                <div className="user-name">
                   <span>{message.username}</span>
                 </div>
-                <div className='usertext'>
+                <div className='user-text'>
                   <span className="message-text">{message.text}</span>
                 </div>
                 <div className="timestamp">

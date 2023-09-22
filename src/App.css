@@ -75,17 +75,18 @@
   font-weight: bolder;
   
 }
-.username{
+.user-name{
   margin-top: 10px;
   
 }
-.usertext{
+.user-text{
   border-radius: 10px;
   background-color: #FFE146;
   margin-top: 10px;
   margin-left: 8px;
   padding: 5px;
   max-width: 200px;
+  word-break: break-all;
 }
 .timestamp{
   margin-top: 10px;
