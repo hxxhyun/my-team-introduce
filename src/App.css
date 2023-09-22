@@ -1,4 +1,4 @@
-.layout{
+.layout {
   max-width: 1200px;
   min-width: 800px;
   margin: 0 auto;
@@ -7,7 +7,7 @@
   height: 100%;
 }
 
-.header{
+.header {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -21,7 +21,7 @@
   font-weight: bold;
 }
 
-.team{
+.team {
   background-color: transparent;
   border: none;
   padding: 5px;
@@ -31,7 +31,7 @@
   justify-content: center;
 }
 
-.logo{
+.logo {
   width: 250px;
   object-fit: contain;
 }
@@ -43,7 +43,7 @@
   margin: -25px auto;
 }
 
-.teammate{
+.teammate {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -56,33 +56,39 @@
   height: 200px;
   width: 250px;
   text-align: center;
-  color: white;
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
   border: none;
   border-radius: 8px;
-  background-color: lightsteelblue;
+  background: url('./image/heehyun.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: transparent;
 }
 
-.member:hover{
-  background-color: blue;
+.member:hover {
+  opacity: 0.7;
+  color: black;
+  font-size: 50px;
   width: 300px;
   height: 230px;
 }
 
-.comment{
+.comment {
   display: flex;
   flex-direction: column;
 }
 
-.comment-record{
+.comment-record {
   border: 1px solid black;
   margin: 10px;
   height: 200px;
   display: flex;
   flex-direction: column;
   padding: 10px;
+  overflow-y: scroll;
 }
 
 .new-comment {
@@ -97,12 +103,12 @@
   width: 100px;
 }
 
-.detail{
+.detail {
   margin: 10px;
   width: 650px;
 }
 
-.addbtn{
+.addbtn {
   margin: 10px 10px 10px auto;
   width: 100px;
   background-color: lightsteelblue;
@@ -111,4 +117,25 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
+}
+
+.modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: lightsteelblue;
+  width: 400px;
+  height: 400px;
+  padding: 15px;
+  font-size: 25px;
+  color: white;
 }

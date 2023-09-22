@@ -1,11 +1,15 @@
 import './App.css';
 import logo from './image/logo.png';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import ReactModal from 'react-modal';
 
 function App() {
-  // const [comment, setComment] = useState([
-  //   {id:1, nickname: '홍길동', detail:'우와!'},
-  // ]);
+  const [comment, setComment] = useState([
+    { id: 1, nickname: '홍길동', detail: '우와!' },
+  ]);
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const modalBackground = useRef();
 
   const [nickname, setNickname] = useState('');
   const [detail, setDetail] = useState('');
@@ -43,7 +47,7 @@ function App() {
 
       <div className='title'>팀원 소개</div>
       <div className='teammate'>
-        <button className='member'>
+        <button onClick={() => setModalOpen(true)} className='member'>
           신희현
         </button>
         <button className='member'>
@@ -53,22 +57,35 @@ function App() {
           박영석
         </button>
       </div>
+      {
+        modalOpen &&
+        <div className={'modal-container'} ref={modalBackground} onClick={e => {
+          if (e.target === modalBackground.current) {
+            setModalOpen(false);
+          }
+        }}>
+          <div className={'modal-content'}>
+            <div>신희현</div>
+            <div>MBTI : ISTP</div>
+            <div>주특기 : Python, Javascript, React</div>
+            <div>향후 목표 : 네카라쿠배 FE직무 취업</div>
+          </div>
+        </div>
+      }
 
       <div className='title'>방명록</div>
       <div className='comment'>
         <div className='comment-record'>
-          코멘트 기록
+          <div>코멘트 기록</div>
         </div>
         <div className='new-comment'>
-          <input className='nickname' type='text' value={nickname} onChange={nicknameChangeHandler} placeholder='닉네임'/>
-          <input className='detail' type='text' value={detail} onChange={detailChangeHandler} placeholder='댓글을 남겨주세요'/>
-          <button className='addbtn' onClick={()=>clickAddbtn()}>게시</button>
+          <input className='nickname' type='text' value={nickname} onChange={nicknameChangeHandler} placeholder='닉네임' />
+          <input className='detail' type='text' value={detail} onChange={detailChangeHandler} placeholder='댓글을 남겨주세요' />
+          <button className='addbtn' onClick={() => clickAddbtn()}>게시</button>
         </div>
       </div>
     </div>
   );
 }
-
-// 주석 추가
 
 export default App;
