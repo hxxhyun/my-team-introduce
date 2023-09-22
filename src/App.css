@@ -77,18 +77,27 @@
 }
 
 .comment {
+  width: 1200px;
+  font-weight: bolder;
+}
+
+.comment-record {
+  height: 200px;
+  background-color: lightsteelblue;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
 }
 
-.comment-record {
-  border: 1px solid black;
-  margin: 10px;
-  height: 200px;
+.comment-item {
   display: flex;
-  flex-direction: column;
-  padding: 10px;
-  overflow-y: scroll;
+  flex-direction: row;
+  align-items: center;
+  /* 요소들을 세로 중앙 정렬 */
+  margin-bottom: 3px;
 }
 
 .new-comment {
@@ -138,4 +147,52 @@
   padding: 15px;
   font-size: 25px;
   color: white;
+}
+
+.user-name {
+  margin-top: 10px;
+}
+
+.user-text{
+  border-radius: 10px;
+  background-color: #FFE146;
+  margin-top: 10px;
+  margin-left: 8px;
+  padding: 5px;
+  max-width: 200px;
+  word-break: break-all;
+}
+
+.timestamp{
+  margin-top: 10px;
+  margin-left: 8px;
+}
+
+.comment-input{
+  margin-top: -12px;
+  margin-bottom: 50px;
+  max-width: 1200px;
+}
+
+.input-name{
+  background-color: #dcdcdc;
+  border: none;
+  border-radius: 5px;
+  width: 80px;
+  height: 30px;
+}
+
+.input-comment{
+  border: none;
+  border-color: #999;
+  width: 1040px;
+  height: 30px;
+}
+
+
+.input-button{
+  background-color: #FFE146;
+  width: 60px;
+  border: none;
+  height: 32px;
 }
