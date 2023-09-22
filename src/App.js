@@ -50,28 +50,61 @@ function App() {
         <button onClick={() => setModalOpen(true)} className='member'>
           신희현
         </button>
-        <button className='member'>
+        {
+          modalOpen &&
+          <div className={'modal-container'} ref={modalBackground} onClick={e => {
+            if (e.target === modalBackground.current) {
+              setModalOpen(false);
+            }
+          }}>
+            <div className={'modal-content'}>
+              <div>신희현</div>
+              <div>MBTI : ISTP</div>
+              <div>주특기 : Python, Javascript, React</div>
+              <div>향후 목표 : 네카라쿠배 FE직무 취업</div>
+            </div>
+          </div>
+        }
+
+        <button onClick={() => setModalOpen(true)} className='member'>
           김광훈
         </button>
-        <button className='member'>
+        {
+          modalOpen &&
+          <div className={'modal-container'} ref={modalBackground} onClick={e => {
+            if (e.target === modalBackground.current) {
+              setModalOpen(false);
+            }
+          }}>
+            <div className={'modal-content'}>
+              <div>신희현</div>
+              <div>MBTI : ISTP</div>
+              <div>주특기 : Python, Javascript, React</div>
+              <div>향후 목표 : 네카라쿠배 FE직무 취업</div>
+            </div>
+          </div>
+        }
+
+        <button onClick={() => setModalOpen(true)} className='member'>
           박영석
         </button>
-      </div>
-      {
-        modalOpen &&
-        <div className={'modal-container'} ref={modalBackground} onClick={e => {
-          if (e.target === modalBackground.current) {
-            setModalOpen(false);
-          }
-        }}>
-          <div className={'modal-content'}>
-            <div>신희현</div>
-            <div>MBTI : ISTP</div>
-            <div>주특기 : Python, Javascript, React</div>
-            <div>향후 목표 : 네카라쿠배 FE직무 취업</div>
+        {
+          modalOpen &&
+          <div className={'modal-container'} ref={modalBackground} onClick={e => {
+            if (e.target === modalBackground.current) {
+              setModalOpen(false);
+            }
+          }}>
+            <div className={'modal-content'}>
+              <div>신희현</div>
+              <div>MBTI : ISTP</div>
+              <div>주특기 : Python, Javascript, React</div>
+              <div>향후 목표 : 네카라쿠배 FE직무 취업</div>
+            </div>
           </div>
-        </div>
-      }
+        }
+      </div>
+
 
       <div className='title'>방명록</div>
       <div className='comment'>
