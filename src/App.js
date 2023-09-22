@@ -69,4 +69,6 @@ function App() {
   );
 }
 
+// 주석 추가
+
 export default App;
