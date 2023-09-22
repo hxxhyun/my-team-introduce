@@ -1,49 +1,88 @@
+import React, { useState } from 'react';
 import './App.css';
 import logo from './image/logo.png';
 
-
 function App() {
+  const [messages, setMessages] = useState([]);
+  const [inputText, setInputText] = useState('');
+  const [usernameInput, setUsernameInput] = useState('');
+
+  const handleSendMessage = () => {
+    if (inputText.trim() !== '' && usernameInput.trim() !== '') {
+      const newMessage = {
+        text: inputText,
+        isMine: true,
+        username: usernameInput,
+        timestamp: new Date().toLocaleTimeString(),
+      };
+      setMessages([...messages, newMessage]);
+      setInputText('');
+    }
+  };
+
   return (
     <div className='layout'>
       <div className='header'>
-        <div>3팀</div>
-        <div>React</div>
-      </div>
-
-      <div className='team'>
-        <button className='logobtn'>
-          <img className='logo' src={logo} alt="logo" />
-        </button>
-        <div>
-          저희 사이트를 방문해주셔서 감사합니다.
-        </div>
-        <div>
-          위 로고를 클릭하시면 저희 팀에 대한 소개를 해드릴 수가 있어요.
+        <div className='navbody'>
+          <nav className="navbar">
+            <div className="navbar_logo">
+              <i className="fas fa-blog"></i>
+              <a href=""><img className='logoimg' src={logo} alt="Logo" /></a>
+            </div>
+          </nav>
         </div>
       </div>
 
-      <div className='title'>팀원 소개</div>
+      <div className='team'></div>
+
+      <div className='teamtitle'>팀원 소개</div>
       <div className='teammate'>
-        <button className='member'>
-
-        </button>
-        <button className='member'>
-
-        </button>
-        <button className='member'>
-
-        </button>
+        <button className='member'></button>
+        <button className='member'></button>
+        <button className='member'></button>
       </div>
 
-      <div className='title'>방명록</div>
+      <div className='commenttitle'>방명록</div>
       <div className='comment'>
         <div className='comment-record'>
-          코멘트 기록
+          <div className="boxset">
+            <div className="namebox">
+              {messages.map((message, index) => (
+                <div>
+                  <span className="username">{message.username}</span>
+                </div>
+              ))}
+            </div>
+            <div>
+              {messages.map((message, index) => (
+                <div key={index} className={message.isMine ? 'mine' : 'other'}>
+                  <span className="message-text">{message.text}</span>
+                </div>
+              ))}
+            </div>
+            <div className="timebox">
+              {messages.map((message) => (
+                <div >
+                  <span className="timestamp">{message.timestamp}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className='new-comment'>
-          <input className='nickname' type='text' />
-          <input className='detail' type='text' />
-          <button className='addbtn'>게시</button>
+        <div className='comment-input'>
+        <input
+            type="text"
+            placeholder="이름"
+            value={usernameInput}
+            onChange={(event) => setUsernameInput(event.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="메시지를 입력하세요."
+            value={inputText}
+            onChange={(event) => setInputText(event.target.value)}
+          />
+          <button onClick={handleSendMessage}>전송</button>
         </div>
       </div>
     </div>

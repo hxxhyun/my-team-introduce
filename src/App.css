@@ -1,5 +1,6 @@
-.layout{
-  max-width: 1200px;
+.layout {
+  width: 100%;
+  max-width: 4000px;
   min-width: 800px;
   margin: 0 auto;
   display: flex;
@@ -7,21 +8,28 @@
   height: 100%;
 }
 
-.header{
+.header {
   display: flex;
   flex-direction: row;
-  text-align: center;
-  justify-content: space-between;
-  padding: 0px 5px;
 }
 
-.title {
+.teamtitle {
   margin: 5px 10px;
   font-size: 22px;
   font-weight: bold;
+  text-align: center;
+}
+.commenttitle{
+  margin: 5px 10px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+.comment{
+  width: 2000px;
 }
 
-.team{
+.team {
   background-color: transparent;
   border: none;
   padding: 5px;
@@ -31,7 +39,7 @@
   justify-content: center;
 }
 
-.logo{
+.logo {
   width: 250px;
   object-fit: contain;
 }
@@ -43,7 +51,7 @@
   margin: -25px auto;
 }
 
-.teammate{
+.teammate {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -61,17 +69,60 @@
   border-radius: 8px;
   background-color: lightsteelblue;
 }
-
-.comment{
+.boxset {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-.comment-record{
-  border: 1px solid black;
-  margin: 10px;
-  height: 200px;
+.comment-input {
+  display: flex;
+  align-items: center;
 }
+
+.comment-record {
+  background-color: lightsteelblue;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.namebox div{
+  font-weight: bold;
+  margin-top: 18px;
+  padding-bottom: 10.6px;
+  margin-right: -2px;
+}
+.timebox div{
+  padding-top: 20px;
+  margin-top: 10px;
+}
+.timestamp {
+  font-size: 12px;
+  color: #999;
+}
+.username-timestamp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mine {
+  background-color: burlywood;
+  color: black;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 200px;
+  padding: 10px;
+}
+
+.other {
+  background-color: #f2f2f2;
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 5px 10px;
+
+}
+
 
 .new-comment {
   display: flex;
@@ -85,12 +136,12 @@
   width: 100px;
 }
 
-.detail{
+.detail {
   margin: 10px;
   width: 650px;
 }
 
-.addbtn{
+.addbtn {
   margin: 10px 10px 10px auto;
   width: 100px;
   background-color: lightsteelblue;
@@ -99,4 +150,16 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
+}
+
+.logoimg {
+  width: 120px;
+  
+}
+
+.comment-input{
+  margin-top: 640px;
+}
+.comment-input button {
+  background-color: lightsalmon;
 }
