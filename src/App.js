@@ -21,15 +21,15 @@ function App() {
   };
 
   return (
-    <div className='layout'>
-      <div className='header'>
-        <div className='navbody'>
-          <nav className="navbar">
+    <div>
+       <nav className="navbar">
             <div className="navbar_logo">
-              <i className="fas fa-blog"></i>
               <a href=""><img className='logoimg' src={logo} alt="Logo" /></a>
             </div>
           </nav>
+      <div className='layout'>
+      <div className='header'>
+        <div className='navbody'>
         </div>
       </div>
 
@@ -45,31 +45,34 @@ function App() {
       <div className='commenttitle'>방명록</div>
       <div className='comment'>
         <div className='comment-record'>
-          <div className="boxset">
-            <div className="namebox">
+          <div >
+            <div className="boxset" >
+              <div >
               {messages.map((message, index) => (
-                <div>
-                  <span className="username">{message.username}</span>
+                <div key={index} className="username">
+                  <span>{message.username}</span>
                 </div>
               ))}
             </div>
             <div>
               {messages.map((message, index) => (
-                <div key={index} className={message.isMine ? 'mine' : 'other'}>
+                <div key={index} className='usertext'>
                   <span className="message-text">{message.text}</span>
                 </div>
               ))}
             </div>
-            <div className="timebox">
-              {messages.map((message) => (
-                <div >
-                  <span className="timestamp">{message.timestamp}</span>
+            <div>
+              {messages.map((message, index) => (
+                <div key={index} className="timestamp">
+                  <span >{message.timestamp}</span>
                 </div>
               ))}
             </div>
+            </div>
           </div>
         </div>
-        <div className='comment-input'>
+      </div>
+      <div className='comment-input'>
         <input
             type="text"
             placeholder="이름"
@@ -82,10 +85,11 @@ function App() {
             value={inputText}
             onChange={(event) => setInputText(event.target.value)}
           />
-          <button onClick={handleSendMessage}>전송</button>
+          <button onClick={handleSendMessage}>게시</button>
         </div>
-      </div>
     </div>
+      </div>
+      
   );
 }
 

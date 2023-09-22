@@ -1,6 +1,5 @@
 .layout {
-  width: 100%;
-  max-width: 4000px;
+  max-width: 1200px;
   min-width: 800px;
   margin: 0 auto;
   display: flex;
@@ -26,9 +25,8 @@
   text-align: center;
 }
 .comment{
-  width: 2000px;
+  width: 1200px;
 }
-
 .team {
   background-color: transparent;
   border: none;
@@ -72,6 +70,17 @@
 .boxset {
   display: flex;
   flex-direction: row;
+  
+}
+.username{
+  margin-top: 10px;
+}
+.usertext{
+  background-color: burlywood;
+  margin-top: 10px;
+}
+.timestamp{
+ 
 }
 
 .comment-input {
@@ -80,49 +89,18 @@
 }
 
 .comment-record {
+  height: 200px;
   background-color: lightsteelblue;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
+  overflow-y: scroll;
 }
-.namebox div{
-  font-weight: bold;
-  margin-top: 18px;
-  padding-bottom: 10.6px;
-  margin-right: -2px;
-}
-.timebox div{
-  padding-top: 20px;
-  margin-top: 10px;
-}
+
 .timestamp {
   font-size: 12px;
   color: #999;
 }
-.username-timestamp {
-  display: flex;
-  justify-content: space-between;
-}
-
-.mine {
-  background-color: burlywood;
-  color: black;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  width: 200px;
-  padding: 10px;
-}
-
-.other {
-  background-color: #f2f2f2;
-  margin-right: auto;
-  border-radius: 5px;
-  padding: 5px 10px;
-
-}
-
 
 .new-comment {
   display: flex;
