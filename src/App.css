@@ -24,8 +24,10 @@
   font-weight: bold;
   text-align: center;
 }
+
 .comment{
   width: 1200px;
+  font-weight: bolder;
 }
 .team {
   background-color: transparent;
@@ -70,23 +72,49 @@
 .boxset {
   display: flex;
   flex-direction: row;
+  font-weight: bolder;
   
 }
 .username{
   margin-top: 10px;
+  
 }
 .usertext{
-  background-color: burlywood;
+  border-radius: 10px;
+  background-color: #FFE146;
   margin-top: 10px;
+  margin-left: 8px;
+  padding: 5px;
+  max-width: 200px;
 }
 .timestamp{
- 
+  margin-top: 10px;
+  margin-left: 8px;
 }
-
-.comment-input {
-  align-items: center;
+.comment-input{
+  margin-top: -12px;
+  margin-bottom: 50px;
+  max-width: 1200px;
 }
-
+.input-name{
+  background-color: #dcdcdc;
+  border: none;
+  border-radius: 5px;
+  width: 80px;
+  height: 30px;
+}
+.input-comment{
+  border: none;
+  border-color: #999;
+  width: 1040px;
+  height: 30px;
+}
+.input-button{
+  background-color: #FFE146;
+  width: 60px;
+  border: none;
+  height: 32px;
+}
 .comment-record {
   height: 200px;
   background-color: lightsteelblue;
@@ -94,11 +122,24 @@
   border-radius: 5px;
   margin-bottom: 10px;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 .timestamp {
   font-size: 12px;
   color: #999;
+}
+
+.comment-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* 요소들을 세로 중앙 정렬 */
+  margin-bottom: 3px;
+}
+
+.username, .usertext, .timestamp {
+  margin-right: 5px;
 }
 
 .new-comment {
@@ -132,11 +173,4 @@
 .logoimg {
   width: 120px;
   
-}
-
-.comment-input{
-  margin-top: 640px;
-}
-.comment-input button {
-  background-color: lightsalmon;
 }
