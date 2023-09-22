@@ -31,6 +31,7 @@ function App() {
       setMessages([...messages, newMessage]);
       // 입력 필드 초기화
       setInputText('');
+      setUsernameInput('');
     }
   };
 
@@ -92,6 +93,8 @@ function App() {
               <div>MBTI : ISTP</div>
               <div>주특기 : Python, Javascript, React</div>
               <div>향후 목표 : 네카라쿠배 FE직무 취업</div>
+              <button className='personal'>Git</button>
+              <button className='personal'>Blog</button>
             </div>
           </div>
         }

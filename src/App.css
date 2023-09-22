@@ -19,6 +19,7 @@
   margin: 10px;
   font-size: 22px;
   font-weight: bold;
+  /* text-align: center; */
 }
 
 .team {
@@ -83,13 +84,14 @@
 
 .comment-record {
   height: 200px;
-  background-color: lightsteelblue;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
+  margin: 10px 25px;
+  background-color: lightsteelblue;
 }
 
 .comment-item {
@@ -141,12 +143,33 @@
 }
 
 .modal-content {
-  background-color: lightsteelblue;
+  background-color: white;
   width: 400px;
-  height: 400px;
+  height: 180px;
   padding: 15px;
   font-size: 25px;
-  color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.personal {
+  background-color: lightgray;
+  width: 180px;
+  height: 40px;
+  margin: 5px;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.personal:hover {
+  opacity: 0.7;
+}
+
+.personal:active {
+  border: 2px solid gray;
 }
 
 .user-name {
@@ -166,33 +189,39 @@
 .timestamp{
   margin-top: 10px;
   margin-left: 8px;
+  font-size: 10px;
+  color: gray;
 }
 
 .comment-input{
-  margin-top: -12px;
-  margin-bottom: 50px;
   max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
 }
 
 .input-name{
-  background-color: #dcdcdc;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid #999;
+  border-radius: 8px;
   width: 80px;
   height: 30px;
+  margin: 5px;
 }
 
 .input-comment{
-  border: none;
-  border-color: #999;
-  width: 1040px;
+  border: 1px solid #999;
+  width: 950px;
   height: 30px;
+  margin: 5px;
+  border-radius: 8px;
 }
-
 
 .input-button{
   background-color: #FFE146;
   width: 60px;
   border: none;
   height: 32px;
+  margin: 5px;
+  border-radius: 8px;
 }
