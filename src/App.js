@@ -127,7 +127,7 @@ function App() {
           </div>
         }
 
-        <button onClick={() => setModalOpen3(true)} className='member'>
+        <button onClick={() => setModalOpen3(true)} className='member3'>
           박영석
         </button>
         {
@@ -145,7 +145,7 @@ function App() {
               <a href='https://github.com/NerdieBrodie'>
                 <button className='personal'>Git</button>
               </a>
-              <a href='https://notion.so/hxxhyun'>
+              <a href='https://velog.io/@hahays94'>
                 <button className='personal'>Blog</button>
               </a>
             </div>

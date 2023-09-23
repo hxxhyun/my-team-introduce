@@ -85,6 +85,23 @@
   color: transparent;
 }
 
+.member3 {
+  margin: 10px;
+  height: 200px;
+  width: 320px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: url('./image/young.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: transparent;
+}
+
 .member:hover {
   opacity: 0.7;
   color: black;
@@ -100,6 +117,15 @@
   width: 350px;
   height: 230px;
 }
+
+.member3:hover {
+  opacity: 0.7;
+  color: black;
+  font-size: 50px;
+  width: 350px;
+  height: 230px;
+}
+
 
 .comment {
   width: 1200px;
