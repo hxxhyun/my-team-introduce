@@ -60,11 +60,9 @@ function App() {
               setModalOpen4(false);
             }
           }}>
-            <div className={'modal-content'}>
-              <div>팀 이름 : 3X3</div>
-              <div>의미 : 3명이서 3인분씩 하는 3팀!!</div>
-              <div></div>
-              <div></div>
+            <div className={'modal-content-title'}>
+              <div className='team-title'>3X3</div>
+              <div>3명이서 3인분씩 하는 3팀!!</div>
             </div>
           </div>
         }
@@ -92,14 +90,18 @@ function App() {
               <div>신희현</div>
               <div>MBTI : ISTP</div>
               <div>주특기 : Python, Javascript, React</div>
-              <div>향후 목표 : 네카라쿠배 FE직무 취업</div>
-              <button className='personal'>Git</button>
-              <button className='personal'>Blog</button>
+              <div>향후 목표 : 꾸준히 성장해서 프론트엔드 직무 취업</div>
+              <a href='https://github.com/hxxhyun'>
+                <button className='personal'>Git</button>
+              </a>
+              <a href='https://notion.so/hxxhyun'>
+                <button className='personal'>Blog</button>
+              </a>
             </div>
           </div>
         }
 
-        <button onClick={() => setModalOpen2(true)} className='member'>
+        <button onClick={() => setModalOpen2(true)} className='member2'>
           김광훈
         </button>
         {
@@ -115,6 +117,12 @@ function App() {
               <div>주특기 : Javascript, React</div>
               <div>향후 목표 : 프리코스에서 배운 것을 바탕으로 프로젝트를 계속 진행하여 성장하기
               </div>
+              <a href='https://github.com/hxxhyun'>
+                <button className='personal'>Git</button>
+              </a>
+              <a href='https://notion.so/hxxhyun'>
+                <button className='personal'>Blog</button>
+              </a>
             </div>
           </div>
         }
@@ -134,6 +142,12 @@ function App() {
               <div>MBTI : INTP</div>
               <div>주특기 : Javascript, React</div>
               <div>향후 목표 : 프리코스에서 배운 것으로 나만의 작은 여행 블로그 만들기</div>
+              <a href='https://github.com/hxxhyun'>
+                <button className='personal'>Git</button>
+              </a>
+              <a href='https://notion.so/hxxhyun'>
+                <button className='personal'>Blog</button>
+              </a>
             </div>
           </div>
         }

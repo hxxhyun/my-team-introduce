@@ -19,7 +19,6 @@
   margin: 10px;
   font-size: 22px;
   font-weight: bold;
-  /* text-align: center; */
 }
 
 .team {
@@ -47,7 +46,7 @@
 .teammate {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
@@ -55,7 +54,7 @@
 .member {
   margin: 10px;
   height: 200px;
-  width: 250px;
+  width: 320px;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
@@ -69,11 +68,36 @@
   color: transparent;
 }
 
+.member2 {
+  margin: 10px;
+  height: 200px;
+  width: 320px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: url('./image/panghoon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: transparent;
+}
+
 .member:hover {
   opacity: 0.7;
   color: black;
   font-size: 50px;
-  width: 300px;
+  width: 350px;
+  height: 230px;
+}
+
+.member2:hover {
+  opacity: 0.7;
+  color: black;
+  font-size: 50px;
+  width: 350px;
   height: 230px;
 }
 
@@ -86,11 +110,11 @@
   height: 200px;
   padding: 10px;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  margin: 10px 25px;
+  margin: 10px;
   background-color: lightsteelblue;
 }
 
@@ -142,11 +166,23 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
+
 .modal-content {
   background-color: white;
   width: 400px;
-  height: 180px;
-  padding: 15px;
+  height: 200px;
+  padding: 25px;
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.modal-content-title {
+  background-color: white;
+  width: 400px;
+  height: 100px;
+  padding: 25px;
   font-size: 25px;
   color: black;
   font-weight: bold;
@@ -157,11 +193,15 @@
   background-color: lightgray;
   width: 180px;
   height: 40px;
-  margin: 5px;
+  margin: 5px 10px;
   border: none;
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.team-title {
+  font-size: 45px;
 }
 
 .personal:hover {
@@ -197,8 +237,7 @@
   max-width: 1200px;
   display: flex;
   flex-direction: row;
-  text-align: center;
-  justify-content: center;
+  margin-top: -5px;
 }
 
 .input-name{
