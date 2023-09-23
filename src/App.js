@@ -180,7 +180,7 @@ function App() {
           <input
             className='input-name'
             type="text"
-            placeholder="이름"
+            placeholder="닉네임"
             value={usernameInput}
             onChange={(event) => setUsernameInput(event.target.value)}
             onKeyPress={handleKeyPress} // Enter 키를 누를 때 handleKeyPress 함수 호출
