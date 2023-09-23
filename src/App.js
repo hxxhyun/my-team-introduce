@@ -117,7 +117,7 @@ function App() {
               <div>주특기 : Javascript, React</div>
               <div>향후 목표 : 프리코스에서 배운 것을 바탕으로 프로젝트를 계속 진행하여 성장하기
               </div>
-              <a href='https://github.com/hxxhyun'>
+              <a href='https://github.com/PangPanghoon'>
                 <button className='personal'>Git</button>
               </a>
               <a href='https://notion.so/hxxhyun'>
@@ -142,7 +142,7 @@ function App() {
               <div>MBTI : INTP</div>
               <div>주특기 : Javascript, React</div>
               <div>향후 목표 : 프리코스에서 배운 것으로 나만의 작은 여행 블로그 만들기</div>
-              <a href='https://github.com/hxxhyun'>
+              <a href='https://github.com/NerdieBrodie'>
                 <button className='personal'>Git</button>
               </a>
               <a href='https://notion.so/hxxhyun'>
