@@ -120,7 +120,7 @@ function App() {
               <a href='https://github.com/PangPanghoon'>
                 <button className='personal'>Git</button>
               </a>
-              <a href='https://notion.so/hxxhyun'>
+              <a href='https://velog.io/@lostter0813'>
                 <button className='personal'>Blog</button>
               </a>
             </div>
